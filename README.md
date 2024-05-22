@@ -1,6 +1,6 @@
-# Nerfies
+# Vidu4D
 
-This is the repository that contains source code for the [Vidu4d](https://vidu4d.github.io).
+This is the repository that contains source code for the [Vidu4D](https://vidu4d.github.io).
 
 If you find Nerfies useful for your work please cite:
 
