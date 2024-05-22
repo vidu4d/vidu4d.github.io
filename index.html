@@ -153,13 +153,8 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <p>Video generative models are receiving particular attention given their ability to generate realistic and imaginative frames. Besides, these models are also observed to exhibit strong 3D consistency, significantly enhancing their potential to act as world simulators.</p>
-    
-          <p>In this work, we present <strong>Vidu4D</strong>, a novel reconstruction model that excels in accurately reconstructing 4D (<em>i.e.</em>, sequential 3D) representations from single generated videos, addressing challenges associated with non-rigidity and frame distortion. This capability is pivotal for creating high-fidelity virtual contents that maintain both spatial and temporal coherence.</p>
-          
-          <p>At the core of Vidu4D is our proposed <em>Dynamic Gaussian Surfels</em> (DGS) technique. DGS optimizes time-varying warping functions to transform Gaussian surfels (surface elements) from a static state to a dynamically warped state. This transformation allows for the precise representation of motion and deformation over time. We apply geometric regularization in the warped state to maintain the structural integrity of surface-aligned Gaussian surfels.</p>
-          
-          <p>Additionally, we learn time-varying refinements on rotation and scaling parameters of Gaussian surfels, which largely alleviates texture flickering during the warping process and helps capture fine-grained appearance details. Equipping Vidu4D with an existing powerful video generative model, the overall framework demonstrates high-fidelity text-to-4D generation in both appearance and geometry.</p>
+          <p>Video generative models are receiving particular attention given their ability to generate realistic and imaginative frames. Besides, these models are also observed to exhibit strong 3D consistency, significantly enhancing their potential to act as world simulators.  In this work, we present Vidu4D, a novel reconstruction model that excels in accurately reconstructing 4D (i.e., sequential 3D) representations from single generated videos, addressing challenges associated with non-rigidity and frame distortion. This capability is pivotal for creating high-fidelity virtual contents that maintain both spatial and temporal coherence. At the core of Vidu4D is our proposed <em>Dynamic Gaussian Surfels</em> (DGS) technique. DGS optimizes time-varying warping functions to transform Gaussian surfels (surface elements) from static state to a dynamically warped state. This transformation enables a precise depiction of motion and deformation over time. To preserve the structural integrity of surface-aligned Gaussian surfels, we design the warped-state geometric regularization based on continuous warping fields for estimating normals. Additionally, we learn refinements on rotation and scaling parameters of Gaussian surfels, which significantly alleviates texture flickering during the warping process and enhances the capture of fine-grained appearance details. Vidu4D also contains a novel initialization state that provides a proper start for the warping fields in DGS. Equipping Vidu4D with an existing video generative model, the overall framework demonstrates high-fidelity text-to-4D generation in both appearance and geometry. The code for Vidu4D will be available to facilitate future research. 
+</p>
       
         </div>
       </div>
@@ -179,8 +174,8 @@
     <!--/ Paper video. -->
   </div>
 </section>
-
-<section class="hero is-light is-small">
+<!----------------------------------------3x4-------------
+ <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3" style="text-align: center;">4D Generation Results</h2>
@@ -214,6 +209,8 @@
     </div>
   </div>
 </section>
+
+
 
 <section class="hero is-light is-small">
   <div class="hero-body">
@@ -279,40 +276,81 @@
       </div>
     </div>
   </div>
-</section>
-<!-- 
+</section> 
+----------------------------------------3x4------------->
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/concat_ref/concat-green-elephant-3dgs-0521-f~1.mp4"
-                    type="video/mp4">
+      <h2 class="title is-3" style="text-align: center;">4D Generation Results</h2>
+      <div class="columns is-multiline">
+        <!-- 第一行 -->
+        <div class="column is-one-third">
+          <video poster="" id="vidu-cat" autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/concat_ref/concat-vidu-cat-3-3dgs-0521-f~1.mp4" type="video/mp4">
           </video>
         </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/concat_ref/concat-redhead-man-3dgs-0521-f~1.mp4"
-            type="video/mp4">
+        <div class="column is-one-third">
+          <video poster="" id="black-dragon" autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/concat_ref/concat-black-dragon-3dgs-0521-f~1.mp4" type="video/mp4">
           </video>
         </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/concat_ref/concat-water-man-3dgs-0521-f~1.mp4"
-                    type="video/mp4">
+        <div class="column is-one-third">
+          <video poster="" id="leopard" autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/concat_ref/concat-leopard-3dgs-0521-f~1.mp4" type="video/mp4">
           </video>
         </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static\videos\concat_ref\concat-skating-3dgs-0521-f~1.mp4"
-                    type="video/mp4">
+        <!-- 第二行 -->
+        <div class="column is-one-third">
+          <video poster="" id="insect" autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/concat_ref/concat-vidu-goldfish-3dgs-0521-f~1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column is-one-third">
+          <video poster="" id="monster" autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/concat_ref/concat-monster-3dgs-0521-f~1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column is-one-third">
+          <video poster="" id="swim-dog" autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/concat_ref/concat-sculpture-2-3dgs-0521-f~1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <!-- 第三行 -->
+        <div class="column is-one-third">
+          <video poster="" id="sculpture" autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/concat_ref/concat-swim-dog-0-3dgs-0521-f~1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column is-one-third">
+          <video poster="" id="vidu-goldfish" autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/concat_ref/concat-fishcat-3dgs-0521-f~1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column is-one-third">
+          <video poster="" id="fishcat" autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/concat_ref/concat-insect-3-3dgs-0521-f~1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <!-- 第四行 -->
+        <div class="column is-one-third">
+          <video poster="" id="hamburger" autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/concat_ref/concat-hamburger-2-3dgs-0521-f~1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column is-one-third">
+          <video poster="" id="dragon" autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/concat_ref/concat-dragon-1-3dgs-0521-f~1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column is-one-third">
+          <video poster="" id="skating" autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/concat_ref/concat-skating-3dgs-0521-f~1.mp4" type="video/mp4">
           </video>
         </div>
       </div>
     </div>
   </div>
-</section> -->
+</section>
 
 
 
@@ -355,12 +393,9 @@
           </video>
         </div>
 
-
-
-
         <div class="item item-steve">
           <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static\videos\concat_jitter\concatjitter-monster-3dgs-0521-f~1.mp4"
+            <source src="./static\videos\concat_jitter\concatjitter-vidu-cat-2-3dgs-0521-f~1.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -370,42 +405,9 @@
             type="video/mp4">
           </video>
         </div>
-<!--         <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static\videos\concat_jitter\concatjitter-sculpture-2-3dgs-0521-f~1.mp4"
-                    type="video/mp4">
-          </video>
-        </div> -->
-        
-<!--         <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static\videos\concat_jitter\concatjitter-rabbit-2-3dgs-0521-f~1.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
- -->
-
 
         <div class="item item-steve">
           <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static\videos\concat_jitter\concatjitter-fishcat-3dgs-0521-f~1.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static\videos\concat_jitter\concatjitter-hamburger-2-3dgs-0521-f~1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-<!--         <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static\videos\concat_jitter\concatjitter-dragon-1-3dgs-0521-f~1.mp4"
-                    type="video/mp4">
-          </video>
-        </div> -->
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
             <source src="./static\videos\concat_jitter\concatjitter-skating-3dgs-0521-f~1.mp4"
                     type="video/mp4">
           </video>
